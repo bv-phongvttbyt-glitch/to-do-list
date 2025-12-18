@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>To-Do List</h1>
+        <p>Quản lý công việc với Spring Boot, PostgreSQL và Lombok.</p>
+    </header>
+
+    <section class="form-section">
+        <h2>Thêm công việc</h2>
+        <form id="task-form">
+            <div class="form-field">
+                <label for="title">Tiêu đề</label>
+                <input id="title" name="title" type="text" placeholder="Nhập tiêu đề" required maxlength="255">
+            </div>
+            <div class="form-field">
+                <label for="description">Mô tả</label>
+                <textarea id="description" name="description" rows="3" maxlength="5000" placeholder="Thêm mô tả (tuỳ chọn)"></textarea>
+            </div>
+            <button type="submit">Thêm</button>
+        </form>
+    </section>
+
+    <section>
+        <div class="list-header">
+            <h2>Danh sách công việc</h2>
+            <button id="refresh-btn" class="secondary">Tải lại</button>
+        </div>
+        <ul id="task-list" class="task-list"></ul>
+    </section>
+</div>
+
+<script src="/js/app.js"></script>
+</body>
+</html>
